@@ -1,0 +1,5 @@
+agm-map > div {
+    height: 300px;
+    width: 200px;
+    overflow: visible;
+  }

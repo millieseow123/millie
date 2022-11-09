@@ -1,0 +1,45 @@
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4" id="AngularButton">
+      <c-card-header>
+        <strong>About</strong>
+      </c-card-header>
+      <c-card-body>
+        <p class="text-medium-emphasis small">
+          Schedulo is a scheduling app that allows you to get your life together if you havent gotten it together
+        </p>
+      </c-card-body>
+    </c-card>
+  </c-col>
+  <c-col xs="12">
+    <c-card class="mb-4" id="AngularButtonWithIcons">
+      <c-card-header>
+        <strong>Examples/ Uses</strong> <small>with icons</small>
+      </c-card-header>
+      <c-card-body>
+        <p class="text-medium-emphasis small">
+          You can combine button with our <a href="https://icons.coreui.io/">CoreUI Icons</a>.
+        </p>
+        <app-docs-example fragment="AngularButtonWithIcons" href="components/button">
+          <c-row *ngFor="let state of states; index as i" class="align-items-center mb-3">
+            <c-col class="mb-3 mb-xl-0" xl="2" xs="12">
+              {{state.charAt(0).toUpperCase() + state.slice(1)}}
+            </c-col>
+            <c-col>
+              <button *ngFor="let color of colors; index as i"
+                      [active]="state === 'active'"
+                      [color]="color"
+                      [disabled]="state === 'disabled'"
+                      cButton
+                      class="me-1"
+              >
+                <svg cIcon class="me-2" name="cil-bell"></svg>
+                {{color.charAt(0).toUpperCase() + color.slice(1)}}
+              </button>
+            </c-col>
+          </c-row>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
